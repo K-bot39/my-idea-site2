@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+/*共通部分*/
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "Yu Gothic Medium","游ゴシック Medium",
+    YuGothic,"游ゴシック","ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color:rgb(0, 0, 0);
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+img {
+    max-width: 100%;
+}
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/*　見出し　*/
+.page-title {
+    font-size: 8rem;
+    font-family: 'Philosopher',serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* ボタン */
+.button {
+    font-size: 1.375rem;
+    background: #0bd;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 18px 32px;
+}
+.button:hover {
+    background: #0090aa;
+}
+
+/* 大きな背景画像 */
+.big-bg {
+    background-size: cover;
+    background-position: center top;
+}
+
+/* HEADER */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    height: 40px;
+    margin-top: 14px;
+}
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-align: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a {
+    color: rgb(255, 255, 255);
+}
+.main-nav a:hover {
+    color: #0bd;
+}
+
+/* HOME */
+.home-content {
+    text-align: center;
+    margin-top: 10%;
+}
+.home-content p {
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+}
+
+#home {
+    /*background-image: url(../img/main-bg.jpg);
+    background-color: #0bd;
+    background-blend-mode: hard-light;
+    background-image: linear-gradient(#c9ffbf,#ffafbd);*/
+    background-image: url(../img/works-bg.png)
+    ,linear-gradient(#000d46, #ffafbd);
+    background-blend-mode: luminosity;
+    min-height: 100vh;
+    color: #fff;
+}
+#home .page-title {
+    text-transform: none;
+}
+
+
+/*ABOUT*/
+#about {
+    background-image: url(../img/works3.png);
+    height: 270px;
+    margin-bottom: 40px;
+    min-height: 100vh;
+    color: #fff;
+}
+
+#about .page-title {
+    text-align: center;
+}
+
+.about-contents {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.about-contents p{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/* メインエリア */
+article {
+    width: 74%;
+}
+
+.article-title {
+    font-family: "Yu Mincho", "YuMincho", serif;
+    font-size: 2rem;
+    font-weight: normal;
+    border-left: 1rem solid #0bd;
+    padding-left: 1rem;
+}
+.article-text{
+    white-space: pre-line;
+    margin-bottom: 60px;
+}
+
+/* サイドバー */
+aside {
+    width: 22%;
+}
+
+.aside-text{
+    font-family: "Yu Mincho", "YuMincho", serif;
+    white-space: pre-line;
+}
+
+/*Works
+-----------------------------*/
+#works {
+    background-image: url(../img/works-bg.png);
+    min-height: 100vh;
+    color: #fff;
+    
+}
+.works-contents {
+    max-width: 560px;
+    margin-top: 10px;
+}
+.works-contents .page-title {
+    text-align: center;
+}
+.works-contents p {
+    font-size: 1.125rem;
+    margin: 10px 0;
+}
+.grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 6%;
+    margin-bottom: 50px;
+    background-color: #00463d;
+    color: #fff;
+}
+
+
+/*フッタ*/
+footer {
+    background: #234;
+    text-align: center;
+    padding: 26px 0;
+}
+footer p {
+    color: #fff;
+    font-size: 0.875rem;
+}
+
+/* モバイル版
+--------------------------- */
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* HEADER */
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .main-nav li {
+        margin: 0 20px;
+    }
+
+    /* HOME */
+    .home-content {
+        margin-top: 20%;
+    }
+}
+
+/* ABOUT */
+
+.about-contents {
+    flex-direction: column;
+}
+#about .page-title {
+    margin-top: 30px;
+}
+article,
+aside {
+    width: 100%;
+}
+aside {
+    margin-top: 60px;
+}
+.article-main {
+    margin-bottom: 30px;
+}
+.article--title {
+    font-size: 1.375rem;
+}
+li a {
+    color: #fff;
+}
+div p {
+    font-size: 20px;
+}
+
+
+/* 動画を画像と同じサイズにする */
+.grid .item video {
+    width: 100%;
+    height: auto;
+}
+
+/* Fancyboxのリンクが正しく動作するように設定 */
+a[data-fancybox="gallery"] {
+    display: block;
+}
+
+/* Fancybox用のオプション：ライトボックスで表示する際のスタイル */
+.fancybox-video {
+    max-width: 90%;
+    max-height: 80%;
+}
